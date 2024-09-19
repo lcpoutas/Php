@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario calculadora</title>
+  </head>
+
+  <body>
+    <h1>Formulario</h1>
+
+    <form action="guardar.php" method="POST">
+      <div>
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" />
+      </div>
+
+      <br />
+
+      <div>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" />
+      </div>
+
+      <br />
+
+      <div>
+        <label for="sexo">Sexo</label> <br />
+        Hombre <input type="radio" id="sexo" name="sexo" value="hombre" /> Mujer
+        <input type="radio" id="sexo" name="sexo" value="hombre" />
+      </div>
+
+      <br />
+
+      <div>
+        <label for="pass">Contraseña</label>
+        <input type="password" id="pass" name="pass" />
+      </div>
+
+      <br />
+
+      <div>
+        <label for="intereses">Intereses</label> <br />
+        Blockchain
+        <input
+          type="checkbox"
+          id="intereses"
+          name="intereses"
+          value="blockchain"
+        />
+        inteligencia artifical
+        <input type="checkbox" id="sexo" name="inetereses" value="IA" />
+        Videojuegos
+        <input
+          type="checkbox"
+          id="intereses"
+          name="intereses"
+          value="videojuegos"
+        />
+        Apps
+        <input type="checkbox" id="intereses" name="intereses" value="Apps" />
+      </div>
+
+      <br />
+
+      <div>
+        <input type="submit" value="Enviar" />
+      </div>
+
+      <br />
+    </form>
+  </body>
+</html>

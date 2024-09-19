@@ -1,0 +1,94 @@
+Bases de datos
+
+Una base de datos se encarga no solo de almacenar datos, sino también de conectarlos entre sí en una unidad lógica. En términos generales, una base de datos 
+es un conjunto de datos estructurados que pertenecen a un mismo contexto y, en cuanto a su función, se utiliza para administrar de forma electrónica grandes 
+cantidades de información.
+
+En este sentido; una biblioteca puede considerarse una base de datos compuesta en su mayoría por documentos y textos impresos en 
+papel e indexados para su consulta.
+
+El elemento principal de una Base de datos son las tablas; las cuales estan formadas por filas, columnas y campos
+
+para acceder a la consola de mysql en XAMMP en linux, en una terminal ve a /opt/lampp/bin y ejecuta ./mysql
+
+en las ordenes es importante acabar con ; sino el interprete da por sentado que no se ha acabado la orden
+
+Ordenes básicas:
+
+    · Para crear una base de datos se usa el comando -> create database nombre_BD;
+
+    · Para mostrar una lista de las bases de datos existentes -> show databases;
+
+    · Para borrar una base de datos -> drop database nombre_BD;
+
+    · Para acceder a una BD -> use nombre_DB;
+    
+    · Para modificar una base de datos primero debemos acceder a ella usando el comando 'use', una vez dentro de la base de datos 
+    le escribimos los comandos necesarios para crear la tabla; por ejemplo:
+
+        CREATE TABLE nombre_tabla(
+            id  INT(11),
+            nombre  VARCHAR(100),
+            apellidos   VARCHAR(255),
+            email   VARCHAR(100),
+            password    VARCHAR(255)
+        );
+
+    · Para mostrar como está compuesta nuestra tabla -> desc nombre_tabla;
+
+    · Para eliminar tablas -> DROP TABLE nombre_tabla;
+
+Restricciones básicas de integridad
+
+    · not null -> que siempre tiene que haber un dato en ese campo
+
+        id INT(11) not null,
+    
+    · null -> este campo siempre tenga como dato el valor null
+
+        id INT(11)  null,
+
+    · default(valor_defecto) -> Introducir el valor que habra pro defecto se hace con la palabra
+
+        nombre VARCHAR(100) default 'Carlos'
+    
+    · auto_increment -> incrementa de manera automatica el valor de la clave; solo vale para claves primarias
+
+        id INT(11) not null,
+
+    · CONSTRAINT pk_nombre_tabla PRIMARY KEY (nombre_clave) -> define la clave primaria de la tabla
+
+Modificadores de tablas
+
+        · Renombrar una tabla -> ALTER TABLE nombre_tabla_antiguo RENAME TO nombre_tabla_nuevo
+
+            ALTER TABLE usuarios RENAME TO usuarios_renom
+
+        · Renombrar un campo de la tabla -> ALTER TABLE nombre_tabla CHANGE nombre_antiguo_campo nombre_nuevo_campo tipo_dato restirctores; por ejemplo:
+
+            ALTER TABLE usuarios CHANGE apellidos apellido VARCHAR(250) NOT NULL
+
+        · Modificar columna sin modificar el nombre -> ALTER TABLE nombre_tabla MODIFIER nombre_campo parametros_a_modificar; por ejemplo:
+
+            ALTER TABLE usuarios MODIFIER apellidos VARCHAR(20) NULL -> he modificado en el campo apellidos el tipo de dato y el restrictor
+        
+        · Añadir columna ->  ALTER TABLE nombre_tabla ADD nombre_campo_añadir tipo_dato restrictor; por ejemplo:
+
+            ALTER TABLE usuarios ADD website VARCHAR(100) NULL
+
+        · Añadir restriccion a una columna -> ALTER TABLE nombre_tabla ADD CONSTRAINT uq_nombre-campo UNIQUE(nombre-campo)
+
+            ALTER TABLE nombre_tabla ADD CONSTRAINT uq_email UNIQUE(email); por ejemplo:
+
+        · Borrar un campo -> ALTER TABLE nombre_tabla DROP nombre_campo; por ejemplo:
+
+            ALTER TABLE usuarios DROP website;
+
+Diseño de bases de datos
+
+
+
+
+
+
+

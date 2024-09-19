@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario calculadora</title>
+  </head>
+
+  <body>
+    <h1>Formulario</h1>
+
+    <form action="ejer4.php" method="GET">
+      <div>
+        <label for="numero1">Numero1</label>
+        <input type="text" id="numero1" name="numero1" />
+      </div>
+
+      <br />
+
+      <div>
+        <label for="numero2">numero2</label>
+        <input type="text" id="numero2" name="numero2" />
+      </div>
+
+      <div>
+        <label for="operacion"
+          >operacion (1-suma, 2-resta, 3-producto, 4-division, 5-resto,
+          vacio-todas)</label
+        >
+        <input type="text" id="operacion" name="operacion" />
+      </div>
+
+      <br />
+
+      <div>
+        <input type="submit" value="Enviar" />
+      </div>
+    </form>
+  </body>
+</html>
