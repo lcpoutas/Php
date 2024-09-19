@@ -18,6 +18,5 @@ The **Ejercicios** folder contains various PHP scripts that can be run individua
 
 1. Set up a local PHP server (e.g., using XAMPP or MAMP), place the scripts in the `htdocs` folder, and access them via your web browser.
 2. Alternatively, you can run the scripts directly in your terminal if you have PHP installed by using the command:
-   ```bash
-php filename.php
+   ```bash php filename.php
 
